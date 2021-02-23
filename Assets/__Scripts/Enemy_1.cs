@@ -16,7 +16,7 @@ public class Enemy_1 : Enemy {
     private float birthTime;
 
 	// Use this for initialization
-	void Start()
+	public void Start()
     {
         // Set x0 to the initial x position of Enemy_1
         x0 = pos.x;
