@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Enemy_5 : Enemy
 {
+    public int shootForce = 1000;
+    public float shootDelay = 1;
+    public float shootInterval = 3;
     public GameObject basicProjectilePrefab;
 
     private void Start()
@@ -18,7 +21,6 @@ public class Enemy_5 : Enemy
         if (bndCheck.offDown)
             Destroy(gameObject);
         
-
         //All "Update" functions called one timer per "frame", like a still image in a movie or animation.
 
         //Calling the base move function from the base class "Enemy"
@@ -33,7 +35,7 @@ public class Enemy_5 : Enemy
         //Create a new instance of the projectile game object.
         GameObject basicProjectileClone = Instantiate(basicProjectilePrefab);
         basicProjectileClone.transform.position = transform.position;
-        basicProjectileClone.GetComponent<Rigidbody>().AddForce(new Vector3(0, -1000, 0));
+        basicProjectileClone.GetComponent<Rigidbody>().AddForce(new Vector3(0, shootForce * -1, 0));
     }
 }
 
@@ -64,10 +66,4 @@ public class Enemy_5 : Enemy
 //BakeACake();
 //BakeACake(22, 3, 20);
 
-//TODO
-
-//Fix bound box to let enemy go off screen.
-//Make projectile a laser.
-//Make projectile shoot towards the player.
-//Make the enemy look at the player.
 

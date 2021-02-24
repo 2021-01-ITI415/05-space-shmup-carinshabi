@@ -290,6 +290,7 @@ MonoBehaviour:
   showingDamage: 0
   damageDoneTime: 0
   notifiedOfDestruction: 0
+  shootForce: 1000
   basicProjectilePrefab: {fileID: 3354303815213348486, guid: 2e2077007054e2b478e48a0a244fe650,
     type: 3}
 --- !u!114 &7519353274296239310
@@ -306,7 +307,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radius: 1
   keepOnScreen: 0
-  isOnScreen: 1
+  isOnScreen: 0
   camWidth: 0
   camHeight: 0
   offRight: 0

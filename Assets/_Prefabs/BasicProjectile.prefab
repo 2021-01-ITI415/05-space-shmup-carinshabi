@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3391006856929207008}
   - component: {fileID: 1013062621672472078}
   - component: {fileID: -1000875224442011823}
+  - component: {fileID: 1738878291249868111}
   m_Layer: 11
   m_Name: BasicProjectile
   m_TagString: Untagged
@@ -125,3 +126,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60f8cca70c83ced48a00014b4441a1c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explosionParticle: {fileID: 198000010585806678, guid: 96730f8640590934eacb6f860058e7f9,
+    type: 3}
+--- !u!135 &1738878291249868111
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3354303815213348486}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 2
+  m_Center: {x: 0, y: 0, z: 0}
