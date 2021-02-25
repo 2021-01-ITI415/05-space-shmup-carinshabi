@@ -17,8 +17,8 @@ public class Enemy_6 : MonoBehaviour
     {
         if (other.gameObject.GetComponentInParent<Hero>() != null)
         {
+            print("explode");
             Detonate();
-            //DamageHero();
             Destroy(gameObject);
         }
     }
@@ -27,4 +27,12 @@ public class Enemy_6 : MonoBehaviour
     {
         ParticleSystem explosionParticleClone = Instantiate(explosionParticle, transform.position, Quaternion.identity);
     }
-}
+
+    private void OnCollisionEnter(Collision coll)
+    {
+        GameObject otherGO = coll.gameObject;
+        if(otherGO.tag == "ProjectileHero")
+            Destroy(gameObject);
+
+    }
+}     

@@ -7,6 +7,16 @@ public class BasicProjectile : MonoBehaviour
     //Get the player object to reference the position
     public ParticleSystem explosionParticle;
 
+    private void Start()
+    {
+        Destroy(gameObject, 5);
+    }
+
+    private void Update()
+    {
+        transform.Rotate(new Vector3(0, 0, .1f * Time.deltaTime));
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.GetComponentInParent<Hero>() != null)

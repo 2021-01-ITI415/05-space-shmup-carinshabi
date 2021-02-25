@@ -18,9 +18,11 @@ public class Enemy_5 : Enemy
 
     private void Update()
     {
-        if (bndCheck.offDown)
+        if (bndCheck != null && bndCheck.offDown)
+        {
             Destroy(gameObject);
-        
+        }
+
         //All "Update" functions called one timer per "frame", like a still image in a movie or animation.
 
         //Calling the base move function from the base class "Enemy"
@@ -28,10 +30,7 @@ public class Enemy_5 : Enemy
     }
 
     private void Shoot()
-    {
-        //Puts a comment in the console.
-        Debug.Log("Shoot");
-
+    {       
         //Create a new instance of the projectile game object.
         GameObject basicProjectileClone = Instantiate(basicProjectilePrefab);
         basicProjectileClone.transform.position = transform.position;
